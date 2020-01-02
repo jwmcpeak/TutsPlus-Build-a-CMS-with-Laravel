@@ -31,7 +31,7 @@
         @endforeach
     
     </table>
-    {{ $model->links() }}
+
 </div>
 
 

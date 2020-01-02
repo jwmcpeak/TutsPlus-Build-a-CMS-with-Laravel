@@ -12,7 +12,7 @@ class Post extends Model
         'slug',
         'body',
         'excerpt',
-        'published_at'
+        'published_at',
     ];
 
     public function user() {

@@ -36,7 +36,7 @@ class User extends Authenticatable
     }
 
     public function isAdminOrEditor() {
-        return $this->hasAnyRole(['admin','editor']);
+        return $this->hasAnyRole(['admin', 'editor']);
     }
 
     public function hasAnyRole($roles) {

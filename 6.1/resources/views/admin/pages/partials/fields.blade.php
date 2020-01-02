@@ -20,7 +20,6 @@
     <input type="text" class="form-control" id="title" 
         name="title" value="{{$model->title}}" />
 </div>
-
 <div class="form-group">
     <label for="url">URL</label>
     <input type="text" class="form-control" id="url" 
@@ -56,5 +55,5 @@
 </div>
 
 <div class="form-group">
-    <input type="submit" class="btn btn-default" value="Submit" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
 </div>

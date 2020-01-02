@@ -28,9 +28,8 @@ Route::resource('/admin/blog', 'Admin\BlogController', ['except' => [
 ]]);
 
 Route::resource('/admin/users', 'Admin\UsersController', ['except' => [
-    'create','store','show'
+    'create', 'store', 'show'
 ]]);
 
 Route::get('/blog', 'BlogPostController@index')->name('blog');
 Route::get('/blog/{slug}', 'BlogPostController@view')->name('blog.view');
-

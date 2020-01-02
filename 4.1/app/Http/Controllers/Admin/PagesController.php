@@ -63,7 +63,7 @@ class PagesController extends Controller
      */
     public function edit(Page $page)
     {
-        if (Auth::user()->cant('foobie', $page)) {
+        if (Auth::user()->cant('update', $page)) {
             return redirect()->route('pages.index');
         } 
 
@@ -79,7 +79,7 @@ class PagesController extends Controller
      */
     public function update(WorkWithPage $request, Page $page)
     {
-        if (Auth::user()->cant('foobie', $page)) {
+        if (Auth::user()->cant('update', $page)) {
             return redirect()->route('pages.index');
         } 
 

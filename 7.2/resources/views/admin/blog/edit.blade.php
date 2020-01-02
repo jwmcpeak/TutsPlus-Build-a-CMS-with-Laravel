@@ -11,7 +11,11 @@
     </form>
 </div>
 
-@include('admin.blog.partials.scripts')
 
+@endsection
+
+@section('scripts')
+
+@include('admin.blog.partials.scripts')
 
 @endsection

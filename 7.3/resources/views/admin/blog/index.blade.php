@@ -8,10 +8,8 @@
         {{ session('status') }}
     </div>
     @endif
-    <br />
-    <a href="{{ route('blog.create') }}" class="btn btn-default">Create New</a>
-    
-    
+    <br>
+    <a href="{{ route('blog.create') }}" class="btn btn-primary">Create New</a>
     
     <table class="table">
         <thead>
@@ -29,17 +27,12 @@
                 <td>
                     <a href="{{ route('blog.edit', ['blog' => $post->id])}}">{{ $post->title }}</a>
                 </td>
-                <td>
-                    {{ $post->user()->first()->name }}
-                </td>
+                <td>{{ $post->user()->first()->name }}</td>
                 <td>{{ $post->slug }}</td>
-                <td>
-                    {{ $post->published_at }}
-                </td>
-                <td>
-                
-                <a href="{{ route('blog.destroy', ['blog'=>$post->id])}}" class="btn btn-danger delete-link" 
-                        data-message="Are you sure you want to delete this page?" 
+                <td>{{ $post->published_at }}</td>
+                <td class="text-right">
+                    <a href="{{ route('blog.destroy', ['blog'=>$post->id])}}" class="btn btn-danger delete-link" 
+                        data-message="Are you sure you want to delete this post?" 
                         data-form="delete-form">
                             Delete
                     </a>
@@ -49,7 +42,6 @@
         @endforeach
     
     </table>
-
     {{ $model->links() }}
 </div>
 <form id="delete-form" action="" method="POST">

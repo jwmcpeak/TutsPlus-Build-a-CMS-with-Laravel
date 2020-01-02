@@ -8,8 +8,4 @@ class PagePresenter extends Presenter {
         $padding = str_repeat('&nbsp;', $this->depth * 4);
         return $padding.$this->title;
     }
-
-    public function dropDownClass() {
-        return $this->children->count() ? 'dropdown' : '';
-    }
 }

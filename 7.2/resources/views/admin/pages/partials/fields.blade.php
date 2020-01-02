@@ -20,7 +20,6 @@
     <input type="text" class="form-control" id="title" 
         name="title" value="{{$model->title}}" />
 </div>
-
 <div class="form-group">
     <label for="url">URL</label>
     <input type="text" class="form-control" id="url" 
@@ -44,7 +43,7 @@
             <option value=""></option>
 
             @foreach ($orderPages as $page)
-            <option value="{{$page->id}}">{{$page->present()->paddedTitle}}</option>
+            <option value="{{$page->id}}">{!!$page->present()->paddedTitle!!}</option>
             @endforeach
         </select>
     </div>
@@ -56,5 +55,5 @@
 </div>
 
 <div class="form-group">
-    <input type="submit" class="btn btn-default" value="Submit" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
 </div>

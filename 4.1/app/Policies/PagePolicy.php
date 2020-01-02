@@ -23,7 +23,7 @@ class PagePolicy
      * @param  \App\Page  $page
      * @return mixed
      */
-    public function foobie(User $user, Page $page)
+    public function update(User $user, Page $page)
     {
         return $user->id == $page->user_id;
     }

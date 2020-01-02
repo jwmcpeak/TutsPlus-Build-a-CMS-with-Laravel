@@ -8,10 +8,8 @@
         {{ session('status') }}
     </div>
     @endif
-    <br />
-    <a href="{{ route('blog.create') }}" class="btn btn-default">Create New</a>
-    
-    
+    <br>
+    <a href="{{ route('blog.create') }}" class="btn btn-primary">Create New</a>
     
     <table class="table">
         <thead>
@@ -26,11 +24,9 @@
         @foreach ($model as $post)
             <tr>
                 <td>
-                    <a href="{{ route('blog.edit', ['post' => $post->id])}}">{{ $post->title }}</a>
+                    <a href="{{ route('blog.edit', ['blog' => $post->id])}}">{{ $post->title }}</a>
                 </td>
-                <td>
-                    {{ $post->user()->first()->name }}
-                </td>
+                <td>{{ $post->user()->first()->name }}</td>
                 <td>{{ $post->slug }}</td>
                 <td></td>
             </tr>
@@ -38,7 +34,6 @@
         @endforeach
     
     </table>
-
     {{ $model->links() }}
 </div>
 

@@ -8,10 +8,8 @@
         {{ session('status') }}
     </div>
     @endif
-    <br />
-    <a href="{{ route('pages.create') }}" class="btn btn-default">Create New</a>
-    
-    
+    <br>
+    <a href="{{ route('pages.create') }}" class="btn btn-primary">Create New</a>
     
     <table class="table">
         <thead>
@@ -25,7 +23,7 @@
         @foreach ($pages as $page)
             <tr>
                 <td>
-                    <a href="{{ route('pages.edit', ['page' => $page->id])}}">{{ $page->present()->paddedTitle }}</a>
+                    <a href="{{ route('pages.edit', ['page' => $page->id])}}">{!! $page->present()->paddedTitle !!}</a>
                 </td>
                 <td>{{ $page->url }}</td>
                 <td class="text-right">
@@ -42,7 +40,6 @@
         @endforeach
     
     </table>
-
     {{ $pages->links() }}
 </div>
 
@@ -50,5 +47,4 @@
     {{ method_field('DELETE') }}
     {!! csrf_field() !!}
 </form>
-
 @endsection

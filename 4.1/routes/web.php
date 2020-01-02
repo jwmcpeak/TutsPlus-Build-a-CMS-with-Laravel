@@ -26,7 +26,7 @@ Route::resource('/admin/pages', 'Admin\PagesController', ['except' => [
 ]]);
 
 Route::resource('/admin/users', 'Admin\UsersController', ['except' => [
-    'create','store','show'
+    'create', 'store', 'show'
 ]]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -8,10 +8,8 @@
         {{ session('status') }}
     </div>
     @endif
-    <br />
-    <a href="{{ route('pages.create') }}" class="btn btn-default">Create New</a>
-    
-    
+    <br>
+    <a href="{{ route('pages.create') }}" class="btn btn-primary">Create New</a>
     
     <table class="table">
         <thead>
@@ -42,7 +40,6 @@
         @endforeach
     
     </table>
-
     {{ $pages->links() }}
 </div>
 
@@ -50,5 +47,4 @@
     {{ method_field('DELETE') }}
     {!! csrf_field() !!}
 </form>
-
 @endsection

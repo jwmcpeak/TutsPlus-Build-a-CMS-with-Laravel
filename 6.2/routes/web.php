@@ -30,7 +30,7 @@ Route::resource('/admin/blog', 'Admin\BlogController', ['except' => [
 ]]);
 
 Route::resource('/admin/users', 'Admin\UsersController', ['except' => [
-    'create','store','show'
+    'create', 'store', 'show'
 ]]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -8,6 +8,8 @@
         {{ method_field('PUT') }}
         {!! csrf_field() !!}
 
+        
+
         @foreach ($roles as $role)
         <div class="checkbox">
             <label>
@@ -20,7 +22,7 @@
         @endforeach
 
         <div class="form-group">
-            <input type="submit" class="btn btn-default" value="Submit" />
+            <input type="submit" class="btn btn-primary" value="Submit" />
         </div>
 
     </form>

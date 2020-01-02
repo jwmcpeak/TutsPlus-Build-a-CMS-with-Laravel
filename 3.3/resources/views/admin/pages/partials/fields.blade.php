@@ -14,5 +14,5 @@
     <textarea class="form-control" name="content" id="content">{{$model->content}}</textarea>
 </div>
 <div class="form-group">
-    <input type="submit" class="btn btn-default" value="Submit" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
 </div>
